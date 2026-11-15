@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Line Movers & Packers | Professional Relocation Services</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            900: '#14532d',
+                        },
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(20, 83, 45, 0.9) 100%), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Top Bar -->
+    <div class="bg-navy-900 text-slate-300 text-xs sm:text-sm py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-6">
+                <a href="tel:+18005552345" class="hover:text-brand-400 transition flex items-center gap-2">
+                    <i class="fa-solid fa-phone text-brand-500"></i> +1 (800) 555-SOUTH
+                </a>
+                <span class="hidden md:inline flex items-center gap-2">
+                    <i class="fa-solid fa-clock text-brand-500"></i> 24/7 Customer Support
+                </span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="hidden sm:inline text-brand-400 font-medium">Licensed & Insured #SL-98241</span>
+                <div class="flex space-x-3">
+                    <a href="#" class="hover:text-brand-400 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-brand-400 transition"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="hover:text-brand-400 transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-brand-400 transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-brand-600 rounded-xl flex items-center justify-center text-white shadow-md shadow-brand-500/20">
+                        <i class="fa-solid fa-truck-moving text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl sm:text-2xl font-black tracking-tight text-navy-900 uppercase">South Line</span>
+                        <span class="block text-xs font-semibold tracking-widest text-brand-600 uppercase">Movers & Packers</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center space-x-8 font-medium text-slate-600">
+                    <a href="#services" class="hover:text-brand-600 transition">Services</a>
+                    <a href="#calculator" class="hover:text-brand-600 transition">Get Quote</a>
+                    <a href="#why-us" class="hover:text-brand-600 transition">Why Us</a>
+                    <a href="#testimonials" class="hover:text-brand-600 transition">Reviews</a>
+                    <a href="#contact" class="hover:text-brand-600 transition">Contact</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <button onclick="openBookingModal('General Booking')" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-xl font-semibold shadow-lg shadow-brand-600/25 transition transform hover:-translate-y-0.5">
+                        Book a Move
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-700 hover:text-brand-600 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#services" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Services</a>
+            <a href="#calculator" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Get Quote</a>
+            <a href="#why-us" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Why Us</a>
+            <a href="#testimonials" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Reviews</a>
+            <a href="#contact" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Contact</a>
+            <button onclick="openBookingModal('General Booking')" class="w-full mt-2 bg-brand-600 text-white py-3 rounded-xl font-semibold shadow-md">
+                Book a Move
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-24 lg:py-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <span class="inline-flex items-center gap-2 bg-brand-500/20 text-brand-300 px-4 py-1.5 rounded-full text-sm font-semibold border border-brand-500/30">
+                        <i class="fa-solid fa-shield-halved"></i> #1 Rated Stress-Free Relocation
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Smooth Moves Across Town or Across the Country
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0">
+                        Experience hassle-free packing, secure loading, and prompt delivery with South Line Movers & Packers. Trusted by thousands of families and businesses.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#calculator" class="w-full sm:w-auto bg-brand-600 hover:bg-brand-500 text-white font-bold px-8 py-4 rounded-xl shadow-xl shadow-brand-600/30 transition text-center">
+                            Calculate Estimate Now
+                        </a>
+                        <a href="tel:+18005552345" class="w-full sm:w-auto bg-white/10 hover:bg-white/25 text-white font-bold px-8 py-4 rounded-xl border border-white/20 transition text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-phone text-brand-400"></i> Call Expert
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Form Card in Hero -->
+                <div class="lg:col-span-5 bg-white text-slate-800 p-6 sm:p-8 rounded-3xl shadow-2xl border border-slate-100">
+                    <h3 class="text-2xl font-bold text-navy-900 mb-2">Instant Quick Booking</h3>
+                    <p class="text-slate-500 text-sm mb-6">Fill in your details for an instant callback and expert inspection.</p>
+                    <form id="heroQuickForm" onsubmit="handleHeroSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Full Name</label>
+                            <input type="text" id="quickName" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm" placeholder="John Doe">
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Phone Number</label>
+                                <input type="tel" id="quickPhone" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm" placeholder="+1 (555) 000-0000">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Service Type</label>
+                                <select id="quickService" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm bg-white">
+                                    <option>Household Moving</option>
+                                    <option>Office Relocation</option>
+                                    <option>Packing Only</option>
+                                    <option>Vehicle Transport</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Moving From & To (Cities)</label>
+                            <input type="text" id="quickRoute" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm" placeholder="e.g., Dallas to Austin">
+                        </div>
+                        <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white py-4 rounded-xl font-bold shadow-lg shadow-brand-600/20 transition">
+                            Request Free Estimate
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-bold uppercase tracking-widest text-sm">Comprehensive Solutions</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-navy-900 mt-2">Our Professional Services</h2>
+                <p class="text-slate-600 mt-4">Whether you are shifting a single bedroom apartment or a multi-story corporate building, we have the right team and tools for the job.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition duration-300 border border-slate-200/60 group">
+                    <div class="w-16 h-16 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Household Relocation</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">Secure packing of fragile items, careful handling of heavy furniture, and prompt door-to-door delivery for your home.</p>
+                    <button onclick="openBookingModal('Household Relocation')" class="text-brand-600 font-semibold text-sm hover:text-brand-700 flex items-center gap-2">
+                        Book Service <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition duration-300 border border-slate-200/60 group">
+                    <div class="w-16 h-16 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-building-user"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Corporate & Office Moving</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">Minimal downtime for your business. Specialized moving of IT servers, office desks, conference setups, and archives.</p>
+                    <button onclick="openBookingModal('Corporate & Office Moving')" class="text-brand-600 font-semibold text-sm hover:text-brand-700 flex items-center gap-2">
+                        Book Service <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition duration-300 border border-slate-200/60 group">
+                    <div class="w-16 h-16 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Professional Packing Services</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">High-grade packing materials including bubble wrap, custom wooden crates, multi-layer corrugated boxes, and wardrobe cartons.</p>
+                    <button onclick="openBookingModal('Professional Packing Services')" class="text-brand-600 font-semibold text-sm hover:text-brand-700 flex items-center gap-2">
+                        Book Service <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition duration-300 border border-slate-200/60 group">
+                    <div class="w-16 h-16 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-car-side"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Vehicle Transport</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">Safe and enclosed car and bike carrier services to transport your vehicles scratch-free to any state.</p>
+                    <button onclick="openBookingModal('Vehicle Transport')" class="text-brand-600 font-semibold text-sm hover:text-brand-700 flex items-center gap-2">
+                        Book Service <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition duration-300 border border-slate-200/60 group">
+                    <div class="w-16 h-16 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-warehouse"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Storage & Warehousing</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">Clean, pest-controlled, and 24/7 security-monitored short-term and long-term storage units for your belongings.</p>
+                    <button onclick="openBookingModal('Storage & Warehousing')" class="text-brand-600 font-semibold text-sm hover:text-brand-700 flex items-center gap-2">
+                        Book Service <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition duration-300 border border-slate-200/60 group">
+                    <div class="w-16 h-16 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-file-shield"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Transit Insurance</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">Comprehensive transit insurance coverage ensuring total peace of mind against any unforeseen transit accidents.</p>
+                    <button onclick="openBookingModal('Transit Insurance')" class="text-brand-600 font-semibold text-sm hover:text-brand-700 flex items-center gap-2">
+                        Book Service <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Cost Calculator Section -->
+    <section id="calculator" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-bold uppercase tracking-widest text-sm">Transparent Pricing</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-navy-900 mt-2">Interactive Cost Estimator</h2>
+                <p class="text-slate-600 mt-4">Estimate your moving costs instantly based on your home size and distance.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-slate-900 text-white rounded-3xl p-8 sm:p-12 shadow-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-300 mb-3">Select Property Size</label>
+                        <select id="calcSize" onchange="calculateEstimate()" class="w-full bg-slate-800 text-white border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-500">
+                            <option value="300">Studio / 1 RK ($300 base)</option>
+                            <option value="500" selected>1 BHK Apartment ($500 base)</option>
+                            <option value="850">2 BHK Apartment ($850 base)</option>
+                            <option value="1200">3 BHK Apartment ($1200 base)</option>
+                            <option value="1800">Independent House / Villa ($1800 base)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-300 mb-3">Distance Type</label>
+                        <select id="calcDistance" onchange="calculateEstimate()" class="w-full bg-slate-800 text-white border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-500">
+                            <option value="1.0">Local Move (Within City)</option>
+                            <option value="1.8">Interstate Move (Medium Distance)</option>
+                            <option value="2.6">Cross Country (Long Distance)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-slate-800 items-center">
+                    <div class="sm:col-span-2">
+                        <span class="text-xs uppercase tracking-widest text-brand-400 font-bold">Estimated Cost Range</span>
+                        <div id="estimateResult" class="text-3xl sm:text-4xl font-extrabold text-white mt-1">$500 - $650</div>
+                        <p class="text-xs text-slate-400 mt-1">*Includes packing materials, loading, transit, and basic insurance. Final inspection confirms exact price.</p>
+                    </div>
+                    <div>
+                        <button onclick="bookWithEstimate()" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-brand-600/30 transition text-center">
+                            Book at This Price
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-brand-600 font-bold uppercase tracking-widest text-sm">Why South Line Movers</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-navy-900">Experience the Peace of Mind You Deserve</h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Relocation can be overwhelming, but with our professional crew, state-of-the-art fleet, and methodical approach, your belongings are in the safest hands possible.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center font-bold shrink-0 mt-1">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy-900 text-lg">Trained & Verified Professionals</h4>
+                                <p class="text-slate-600 text-sm">Our crew members undergo rigorous background verification and professional packing training.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center font-bold shrink-0 mt-1">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy-900 text-lg">GPS Tracked Modern Fleet</h4>
+                                <p class="text-slate-600 text-sm">Monitor your cargo in real-time with our modern, weather-proof, and well-maintained container trucks.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center font-bold shrink-0 mt-1">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy-900 text-lg">100% Damage-Free Guarantee</h4>
+                                <p class="text-slate-600 text-sm">Multi-layer protective packing ensures your valuables reach their destination without a single scratch.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Graphic Box -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-6">
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200/80 text-center">
+                        <div class="text-4xl sm:text-5xl font-black text-brand-600 mb-2">15k+</div>
+                        <div class="text-slate-600 font-medium text-sm">Successful Moves</div>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200/80 text-center">
+                        <div class="text-4xl sm:text-5xl font-black text-brand-600 mb-2">99.8%</div>
+                        <div class="text-slate-600 font-medium text-sm">Satisfaction Rate</div>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200/80 text-center">
+                        <div class="text-4xl sm:text-5xl font-black text-brand-600 mb-2">45+</div>
+                        <div class="text-slate-600 font-medium text-sm">Cities Covered</div>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200/80 text-center">
+                        <div class="text-4xl sm:text-5xl font-black text-brand-600 mb-2">12 yrs</div>
+                        <div class="text-slate-600 font-medium text-sm">Industry Experience</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-bold uppercase tracking-widest text-sm">Client Testimonials</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-navy-900 mt-2">What Our Customers Say</h2>
+                <p class="text-slate-600 mt-4">Read authentic reviews from families and businesses who relocated with us.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-sm mb-4 space-x-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed mb-6">
+                            "South Line Movers made our interstate shift absolutely seamless. Their crew arrived right on time, packed everything with extreme care, and reassembled our beds at the new home."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-slate-200">
+                        <div class="w-12 h-12 bg-brand-600 text-white font-bold rounded-full flex items-center justify-center">
+                            SR
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy-900">Sarah Roberts</h4>
+                            <span class="text-xs text-slate-500">Moved from Austin to Houston</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-sm mb-4 space-x-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed mb-6">
+                            "We shifted our entire 30-person office over the weekend with zero downtime on Monday morning. Exceptional coordination by the South Line corporate team!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-slate-200">
+                        <div class="w-12 h-12 bg-brand-600 text-white font-bold rounded-full flex items-center justify-center">
+                            MK
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy-900">Michael K.</h4>
+                            <span class="text-xs text-slate-500">Corporate Office Relocation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-sm mb-4 space-x-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed mb-6">
+                            "Very transparent pricing with no hidden charges at the end. The guys were polite, efficient, and very professional. Highly recommend South Line!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-slate-200">
+                        <div class="w-12 h-12 bg-brand-600 text-white font-bold rounded-full flex items-center justify-center">
+                            EP
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy-900">Elena P.</h4>
+                            <span class="text-xs text-slate-500">Local Apartment Move</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <footer id="contact" class="bg-navy-900 text-slate-300 pt-20 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Col 1 -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-brand-600 rounded-xl flex items-center justify-center text-white">
+                            <i class="fa-solid fa-truck-moving text-xl"></i>
+                        </div>
+                        <span class="text-xl font-black text-white uppercase">South Line</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Your trusted partner for safe, fast, and secure relocation services nationwide. Fully insured and licensed.
+                    </p>
+                    <div class="flex space-x-3 pt-2">
+                        <a href="#" class="w-9 h-9 bg-slate-800 hover:bg-brand-600 text-white rounded-lg flex items-center justify-center transition"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                        <a href="#" class="w-9 h-9 bg-slate-800 hover:bg-brand-600 text-white rounded-lg flex items-center justify-center transition"><i class="fa-brands fa-twitter text-sm"></i></a>
+                        <a href="#" class="w-9 h-9 bg-slate-800 hover:bg-brand-600 text-white rounded-lg flex items-center justify-center transition"><i class="fa-brands fa-instagram text-sm"></i></a>
+                        <a href="#" class="w-9 h-9 bg-slate-800 hover:bg-brand-600 text-white rounded-lg flex items-center justify-center transition"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#services" class="hover:text-brand-400 transition">Our Services</a></li>
+                        <li><a href="#calculator" class="hover:text-brand-400 transition">Cost Calculator</a></li>
+                        <li><a href="#why-us" class="hover:text-brand-400 transition">Why Choose Us</a></li>
+                        <li><a href="#testimonials" class="hover:text-brand-400 transition">Customer Reviews</a></li>
+                        <li><a href="#contact" class="hover:text-brand-400 transition">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Services</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" onclick="openBookingModal('Household Relocation')" class="hover:text-brand-400 transition">Household Relocation</a></li>
+                        <li><a href="#" onclick="openBookingModal('Corporate Office Moving')" class="hover:text-brand-400 transition">Office & Corporate Moving</a></li>
+                        <li><a href="#" onclick="openBookingModal('Professional Packing')" class="hover:text-brand-400 transition">Packing & Crating</a></li>
+                        <li><a href="#" onclick="openBookingModal('Vehicle Transport')" class="hover:text-brand-400 transition">Vehicle Transport</a></li>
+                        <li><a href="#" onclick="openBookingModal('Storage Warehousing')" class="hover:text-brand-400 transition">Storage & Warehousing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Headquarters</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-brand-500 mt-1"></i>
+                            <span>100 Logistics Blvd, Suite 400, Southline City, TX 75001</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-brand-500"></i>
+                            <a href="tel:+18005552345" class="hover:text-brand-400">+1 (800) 555-SOUTH</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-brand-500"></i>
+                            <a href="mailto:support@southlinemovers.com" class="hover:text-brand-400">support@southlinemovers.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 South Line Movers & Packers. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-400">Terms of Service</a>
+                    <a href="#" class="hover:text-slate-400">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal / Message Box -->
+    <div id="bookingModal" class="fixed inset-0 z-50 flex items-center justify-center bg-navy-900/80 backdrop-blur-sm hidden p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl animate-fade-in">
+            <button onclick="closeBookingModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-700 text-xl font-bold p-2">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 id="modalTitle" class="text-2xl font-bold text-navy-900 mb-2">Book Your Move</h3>
+            <p id="modalSubtitle" class="text-slate-500 text-sm mb-6">Enter your details and our team will contact you within 15 minutes with a confirmed quote.</p>
+            
+            <form id="modalForm" onsubmit="handleModalSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Full Name</label>
+                    <input type="text" id="modalName" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm" placeholder="John Doe">
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Phone Number</label>
+                        <input type="tel" id="modalPhone" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm" placeholder="+1 (555) 000-0000">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Preferred Date</label>
+                        <input type="date" id="modalDate" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Moving Route (From City to City)</label>
+                    <input type="text" id="modalRoute" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm" placeholder="e.g., Dallas to Austin">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Additional Notes</label>
+                    <textarea id="modalNotes" rows="2" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm" placeholder="Any special items like piano, heavy furniture, etc."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white py-4 rounded-xl font-bold shadow-lg shadow-brand-600/20 transition">
+                    Confirm Booking Request
+                </button>
+            </form>
+
+            <div id="successMessage" class="hidden text-center py-8 space-y-4">
+                <div class="w-16 h-16 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center text-3xl mx-auto">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h4 class="text-2xl font-bold text-navy-900">Booking Request Received!</h4>
+                <p class="text-slate-600 text-sm">Thank you! One of our moving coordinators will call you shortly to verify details and finalize your discount.</p>
+                <button onclick="closeBookingModal()" class="bg-navy-900 text-white font-bold px-6 py-3 rounded-xl mt-4">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Interactive Cost Calculator
+        function calculateEstimate() {
+            const sizeBase = parseInt(document.getElementById('calcSize').value);
+            const multiplier = parseFloat(document.getElementById('calcDistance').value);
+            
+            const minEstimate = Math.round(sizeBase * multiplier);
+            const maxEstimate = Math.round(minEstimate * 1.25);
+
+            document.getElementById('estimateResult').innerText = `$${minEstimate} - $${maxEstimate}`;
+        }
+
+        // Modal Handlers
+        let selectedServiceType = 'General Booking';
+
+        function openBookingModal(serviceName) {
+            selectedServiceType = serviceName;
+            document.getElementById('modalTitle').innerText = `Book: ${serviceName}`;
+            document.getElementById('bookingModal').classList.remove('hidden');
+            document.getElementById('modalForm').classList.remove('hidden');
+            document.getElementById('successMessage').classList.add('hidden');
+            document.getElementById('modalForm').reset();
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.add('hidden');
+        }
+
+        function bookWithEstimate() {
+            const estimateText = document.getElementById('estimateResult').innerText;
+            openBookingModal(`Move (${estimateText})`);
+        }
+
+        function handleHeroSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('quickName').value;
+            const phone = document.getElementById('quickPhone').value;
+            const service = document.getElementById('quickService').value;
+            const route = document.getElementById('quickRoute').value;
+
+            openBookingModal(service);
+            document.getElementById('modalName').value = name;
+            document.getElementById('modalPhone').value = phone;
+            document.getElementById('modalRoute').value = route;
+        }
+
+        function handleModalSubmit(e) {
+            e.preventDefault();
+            document.getElementById('modalForm').classList.add('hidden');
+            document.getElementById('successMessage').classList.remove('hidden');
+        }
+
+        // Initialize calculator on load
+        window.onload = function() {
+            calculateEstimate();
+        };
+    </script>
+</body>
+</html>
